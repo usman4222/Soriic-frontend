@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../AllUsers/AllUser.css'
 import { Fragment } from 'react'
-import { DataGrid } from '@material-ui/data-grid'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSnackbar } from 'notistack'
 import { clearErrors } from '../../actions/addUserAction'

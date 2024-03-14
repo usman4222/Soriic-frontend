@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import '../AllUsers/AllUser.css'
 import { Fragment } from 'react'
-import { DataGrid } from '@material-ui/data-grid'
 import { useSelector, useDispatch } from 'react-redux'
 import { useSnackbar } from 'notistack'
 import { clearErrors } from '../../actions/addUserAction'
@@ -12,7 +11,6 @@ import { getAllRevenue } from '../../actions/revenue'
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { getUserDetails } from '../../actions/updateUser'
 import { getSearchAttendance } from '../../actions/attendanceAction'
-import { Button } from '@material-ui/core'
 import { Doughnut } from 'react-chartjs-2'
 import Loader from '../../components/Loader/Loader'
 
@@ -184,7 +182,7 @@ const FilterAttendance = () => {
                                             </div>
                                             <div className='col-lg-2 main-r1-b1'>
                                                 <Link to={`/attendancelist/${user._id}`}>
-                                                    <Button>Attendance List</Button>
+                                                    <button>Attendance List</button>
                                                 </Link>
                                             </div>
                                         </div>

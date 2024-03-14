@@ -1,6 +1,4 @@
 import React from 'react';
-import DashboardIcon from '@material-ui/icons/Dashboard';
-import PeopleIcon from '@material-ui/icons/People';
 import { FaUser } from 'react-icons/fa';
 import { PiUsersThreeFill } from "react-icons/pi";
 import { HiCurrencyRupee } from "react-icons/hi2";
@@ -12,6 +10,8 @@ import { LuLogOut } from 'react-icons/lu';
 import { GiReceiveMoney } from "react-icons/gi";
 import { GiTakeMyMoney } from "react-icons/gi";
 import { GiPayMoney } from "react-icons/gi";
+import { IoPeople } from "react-icons/io5";
+
 
 
 const Sidebar = () => {
@@ -38,7 +38,7 @@ const Sidebar = () => {
                         </li>
                         <li>
                             <Link className="s-sidebar__nav-link" to="/allemployees">
-                                <PeopleIcon />All Employees
+                                <IoPeople />All Employees
                             </Link>
                         </li>
                         <li>

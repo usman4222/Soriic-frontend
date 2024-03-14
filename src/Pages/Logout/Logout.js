@@ -1,6 +1,5 @@
 import React from 'react';
 import { LuLogOut } from 'react-icons/lu';
-import { Typography } from '@material-ui/core';
 import { Link, useNavigate } from 'react-router-dom';  
 import '../NotFound/NotFound.css';
 import { useSnackbar } from 'notistack';
@@ -21,7 +20,7 @@ const Logout = () => {
     return (
         <div className='pageNotFound'>
             <LuLogOut />
-            <Typography>Are you sure to Logout...?</Typography>
+            <h3>Are you sure to Logout...?</h3>
             <Link onClick={logoutUser}>Logout</Link>
             <Link to='/'>Back to DashBoard</Link>
         </div>

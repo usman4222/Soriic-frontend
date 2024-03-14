@@ -1,12 +1,8 @@
 import React, { useEffect, useState } from 'react'
 import './AllUser.css'
 import { Fragment } from 'react'
-import { DataGrid } from '@material-ui/data-grid'
 import { useSelector, useDispatch } from 'react-redux'
 import { Link, useNavigate, useParams } from 'react-router-dom'
-import { Button } from '@material-ui/core'
-import EditIcon from "@material-ui/icons/Edit"
-import DeleteIcon from "@material-ui/icons/Delete"
 import { useSnackbar } from 'notistack'
 import { getAllUsers, clearErrors, } from '../../actions/addUserAction'
 import { deleteUser } from '../../actions/deleteUser'
@@ -14,6 +10,9 @@ import { DELETE_USER_RESET } from '../../constants/deleteUserConstant'
 import Sidebar from '../Sidebar'
 import Header from '../../components/Header'
 import Loader from '../../components/Loader/Loader';
+import { MdDeleteForever } from "react-icons/md";
+import { MdEdit } from "react-icons/md";
+
 
 const AllUser = () => {
 
@@ -107,11 +106,11 @@ const AllUser = () => {
     const renderActionButton = (id) => (
         <Fragment>
             <Link to={`/updateuser/${id}`} className='edit'>
-                <EditIcon />
+                <MdEdit />
             </Link>
-            <Button onClick={() => deleteUserHandler(id)}>
-                <DeleteIcon />
-            </Button>
+            <button onClick={() => deleteUserHandler(id)}>
+                <MdDeleteForever />
+            </button>
         </Fragment>
     );
 

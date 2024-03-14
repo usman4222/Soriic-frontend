@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import { Fragment } from 'react';
-import { DataGrid } from '@material-ui/data-grid';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link, useNavigate, useParams } from 'react-router-dom';
 import { useSnackbar } from 'notistack';
-import { Button } from '@material-ui/core';
 import { getAllUsers, clearErrors } from '../../actions/addUserAction';
 import { deleteUser } from '../../actions/deleteUser';
 import { DELETE_USER_RESET } from '../../constants/deleteUserConstant';
@@ -73,7 +71,7 @@ const Attendance = () => {
       flex: 0.6,
       renderCell: (params) => (
         <Link to={`/attendance/${params.getValue(params.id, "id")}`}>
-          <Button
+          <button
             variant="contained"
             style={{
               backgroundColor: '#344854',
@@ -91,7 +89,7 @@ const Attendance = () => {
             }}
           >
             Mark Attendance
-          </Button>
+          </button>
         </Link>
       ),
     },
@@ -102,7 +100,7 @@ const Attendance = () => {
       flex: 0.5,
       renderCell: (params) => (
         <Link to={`/attendance/view/${params.getValue(params.id, "id")}`}>
-          <Button
+          <button
             variant="contained"
             className='att-btn'
             style={{
@@ -121,7 +119,7 @@ const Attendance = () => {
             }}
           >
             View Attendance
-          </Button>
+          </button>
         </Link>
       ),
     },
@@ -183,7 +181,7 @@ const Attendance = () => {
                             <td style={{ textAlign: 'center' }}>{item.role}</td>
                             <td style={{ textAlign: 'center' }}>
                               <Link to={`/attendance/${item.id}`}>
-                                <Button
+                                <button
                                   variant="contained"
                                   style={{
                                     backgroundColor: '#344854',
@@ -197,12 +195,12 @@ const Attendance = () => {
                                   }}
                                 >
                                   Mark Attendance
-                                </Button>
+                                </button>
                               </Link>
                             </td>
                             <td style={{ textAlign: 'center' }}>
                               <Link to={`/attendance/view/${item.id}`}>
-                                <Button
+                                <button
                                   variant="contained"
                                   className='att-btn'
                                   style={{
@@ -217,7 +215,7 @@ const Attendance = () => {
                                   }}
                                 >
                                   View Attendance
-                                </Button>
+                                </button>
                               </Link>
                             </td>
                           </tr>

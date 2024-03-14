@@ -1,5 +1,4 @@
 import React, { useEffect, useState, Fragment } from 'react';
-import { DataGrid } from '@material-ui/data-grid';
 import { useSelector, useDispatch } from 'react-redux';
 import { getAttendanceDetails, getUserAttendance } from '../../actions/attendanceAction';
 import { getUserDetails } from '../../actions/updateUser';
@@ -9,7 +8,6 @@ import Sidebar from '../Sidebar';
 import { Doughnut } from 'react-chartjs-2';
 import { v4 as uuidv4 } from 'uuid';
 import './Attendance.css'
-import { Button } from '@material-ui/core';
 import Loader from '../../components/Loader/Loader';
 
 const AttendanceDetails = () => {
@@ -129,7 +127,7 @@ const AttendanceDetails = () => {
                                     </div>
                                     <div className='col-lg-2 main-r1-b1'>
                                         <Link to={`/searchattendance/${user._id}`}>
-                                            <Button>Search Attendance</Button>
+                                            <button>Search Attendance</button>
                                         </Link>
                                     </div>
                                 </div>

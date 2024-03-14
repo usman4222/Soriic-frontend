@@ -2,7 +2,6 @@ import React, { Fragment, useState, useEffect } from 'react';
 import Sidebar from '../Sidebar';
 import './dashBoard.css';
 import Header from '../../components/Header';
-import PeopleIcon from '@material-ui/icons/People'
 import { Bar } from 'react-chartjs-2';
 import { DoughnutChart } from './Chart';
 import { Doughnut } from 'react-chartjs-2';
